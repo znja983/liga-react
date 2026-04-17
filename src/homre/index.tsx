@@ -89,6 +89,15 @@ function Home() {
               <td>{equipo.points}</td>
             </tr>
           ))}
+
+          {estadisticas.map((equipo) => (
+            <tr key={equipo.position}>
+              <td>{equipo.position}</td>
+              <td>{equipo.name}</td>
+              <td>{equipo.appearances}</td>
+              <td>{equipo.value}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
