@@ -1,21 +1,66 @@
-.c-menu{
-    background: silver;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 10px 0;
+.c-menu {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
 }
 
-.c-menu img{
-    height: 20px;
-    display: block;
-    margin: 0 auto;
+.c-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.c-menu p {
-    font-size: 14px
+.c-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .c-menu {
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .c-menu a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .main-content {
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
